@@ -18,6 +18,6 @@ ansible-playbook -i ./ansible/inventory/dev_stack_dynamic_inventory_aws_ec2.yaml
 # Tear down the k8s infrastructure
 cd infrastructure/dev-k8s-terraform
 terraform destroy -auto-approve
-# Delete key pair
+# Delete key pairr
 aws ec2 delete-key-pair --region ${AWS_REGION} --key-name ${ANS_KEYPAIR}
 rm -rf ${ANS_KEYPAIR}
